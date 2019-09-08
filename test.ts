@@ -9,7 +9,7 @@ const lexer = new HelloLexer(inputStream);
 const tokenStream = new CommonTokenStream(lexer);
 const parser = new HelloParser(tokenStream);
 
-class GreetingVisitor extends AbstractParseTreeVisitor<string[]> implements HelloVisitor<string[]> {
+class TreeVisitor extends AbstractParseTreeVisitor<string[]> implements HelloVisitor<string[]> {
 
     defaultResult() {
         return [];
@@ -29,7 +29,7 @@ class GreetingVisitor extends AbstractParseTreeVisitor<string[]> implements Hell
     // }
 }
 
-const visitor = new GreetingVisitor();
+const visitor = new TreeVisitor();
 const tree = parser.greeting();
 const result: string[] = visitor.visit(tree);
 console.log(result);
