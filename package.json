@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cleanup": "rm -rf ./gen/* ./dist/*",
     "generate": "antlr4ts -o gen -visitor Hello.g4",
     "build": "rm -rf ./dist && tsc",
     "start": "rm -rf ./dist && tsc -w",
@@ -13,14 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/antlr4": "^4.7.0",
-    "antlr4": "^4.7.2",
     "antlr4ts": "^0.5.0-alpha.3"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.1",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "antlr4ts-cli": "^0.5.0-alpha.3",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "antlr4ts-cli": "^0.5.0-alpha.3"
+    "mocha": "^6.2.1",
+    "typescript": "^3.6.4"
   }
 }

@@ -3,3 +3,4 @@
 /.antlr
 /dist
 /gen
+node_modules
